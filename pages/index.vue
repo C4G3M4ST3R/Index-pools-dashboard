@@ -12,7 +12,7 @@
           <h3 class="mb-3">
             Amplify your portfolio and
             <br />
-            soar to new heights with Amun DeFi.
+            soar to new heights with C4G3 Indices.
           </h3>
           <p>
             Connect your wallet and browse through our
