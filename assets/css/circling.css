@@ -1,0 +1,76 @@
+.circling-animation {
+  position: absolute;
+  right: 25%;
+  top: 0;
+  width: 20vw;
+  height: 20vw;
+  border: 0.4vw solid var(--secondary-color);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+  animation: rotate 15s infinite linear;
+}
+.circle {
+  display: block;
+  position: absolute;
+  width: 16%;
+  height: 16%;
+  margin: -8%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+
+.circle.first {
+  transform: rotate(20deg) translate(12vw) rotate(-20deg);
+}
+.circle.second {
+  transform: rotate(150deg) translate(13.5vw) rotate(-150deg);
+}
+.circle.third {
+  transform: rotate(250deg) translate(14.5vw) rotate(-250deg);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .circling-animation {
+    width: 75vw;
+    height: 75vw;
+    right: 15%;
+    top: 0px;
+  }
+  .circle.first {
+    transform: rotate(20deg) translate(24vw) rotate(-20deg);
+  }
+  .circle.second {
+    transform: rotate(150deg) translate(26vw) rotate(-150deg);
+  }
+  .circle.third {
+    transform: rotate(250deg) translate(28vw) rotate(-250deg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .circling-animation {
+    width: 40vw;
+    height: 40vw;
+    right: 30%;
+  }
+  .circle.first {
+    transform: rotate(20deg) translate(24vw) rotate(-20deg);
+  }
+  .circle.second {
+    transform: rotate(150deg) translate(26vw) rotate(-150deg);
+  }
+  .circle.third {
+    transform: rotate(250deg) translate(28vw) rotate(-250deg);
+  }
+}
