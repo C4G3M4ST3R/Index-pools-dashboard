@@ -3,6 +3,7 @@ export const state = () => ({
     loggedIn: false,
   },
   connectKey: 43,
+  darkMode: false,
 });
 
 export const mutations = {

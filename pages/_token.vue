@@ -37,7 +37,7 @@
       </div>
 
       <div class="row">
-        <div class="col-md-9 col-12">
+        <div class="col-lg-9 col-12">
           <hr />
 
           <div class="d-flex justify-content-between my-5 pt-5">
@@ -76,7 +76,7 @@
             </div>
           </div>
 
-          <div class="chart">
+          <div class="chart text-center">
             <chart />
           </div>
 
@@ -105,54 +105,12 @@
             <!-- Tab panes -->
             <div class="tab-content pt-1">
               <div
-                class="tab-pane active"
+                class="tab-pane active bg-transparent"
                 :id="`${currentTab}-fill`"
                 role="tabpanel"
                 :aria-labelledby="`${currentTab}-tab-fill`"
               >
                 <component :is="currentComponent"></component>
-              </div>
-              <div
-                class="tab-pane"
-                id="messages-fill"
-                role="tabpanel"
-                aria-labelledby="messages-tab-fill"
-              >
-                <p>
-                  Croissant jelly tootsie roll candy canes. Donut sugar plum
-                  jujubes sweet roll chocolate cake wafer. Tart caramels
-                  jujubes. Dragée tart oat cake. Fruitcake cheesecake danish.
-                  Danish topping candy jujubes. Candy canes candy canes lemon
-                  drops caramels tiramisu chocolate bar pie.
-                </p>
-                <p>
-                  Gummi bears tootsie roll cake wafer. Gummies powder apple pie
-                  bear claw. Caramels bear claw fruitcake topping lemon drops.
-                  Carrot cake macaroon ice cream liquorice donut soufflé. Gummi
-                  bears carrot cake toffee bonbon gingerbread lemon drops
-                  chocolate cake.
-                </p>
-              </div>
-              <div
-                class="tab-pane"
-                id="settings-fill"
-                role="tabpanel"
-                aria-labelledby="settings-tab-fill"
-              >
-                <p>
-                  Candy canes halvah biscuit muffin dessert biscuit marzipan.
-                  Gummi bears marzipan bonbon chupa chups biscuit lollipop
-                  topping. Muffin sweet apple pie sweet roll jujubes chocolate.
-                  Topping cake chupa chups chocolate bar tiramisu tart sweet
-                  roll chocolate cake.
-                </p>
-                <p>
-                  Jelly beans caramels muffin wafer sesame snaps chupa chups
-                  chocolate cake pastry halvah. Sugar plum cotton candy macaroon
-                  tootsie roll topping. Liquorice topping chocolate cake tart
-                  tootsie roll danish bear claw. Donut candy canes marshmallow.
-                  Wafer cookie apple pie.
-                </p>
               </div>
             </div>
           </div>
@@ -165,13 +123,13 @@
                 <h4>
                   You are not connected to your wallet.
                 </h4>
-                <p class="text-grey">
+                <p>
                   To purchase a token your wallet should be connected.
                 </p>
               </div>
 
               <div>
-                <button class="btn-grey px-5 py-2 text-white">
+                <button class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white">
                   Connect Wallet
                 </button>
               </div>
@@ -298,10 +256,6 @@ nav {
   font-size: 1.15rem;
 }
 
-.card.other {
-  background: linear-gradient(#fff 80%, #f2f2f3);
-}
-
 .nav-item button {
   font-size: 1rem;
   font-weight: 500;
@@ -315,7 +269,7 @@ nav {
 }
 
 .nav-item.active button {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .text-success {
@@ -329,5 +283,14 @@ nav {
 .nav.nav-tabs .nav-item .nav-link.active:after {
   box-shadow: none !important;
   background: var(--primary-color) !important;
+}
+
+.dark-layout .text-black {
+  color: #c2c6dc;
+}
+
+.card.other {
+  max-width: 320px;
+  margin: 0 auto;
 }
 </style>

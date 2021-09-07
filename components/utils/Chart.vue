@@ -83,4 +83,9 @@ export default {
 .cage-chart >>> .highcharts-credits {
   display: none !important;
 }
+
+.cage-chart >>> .highcharts-container {
+  text-align: center !important;
+  width: 100% !important;
+}
 </style>

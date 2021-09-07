@@ -33,7 +33,7 @@
 
     <div class="main-menu-content mt-5">
       <ul
-        class="navigation navigation-main"
+        class="navigation navigation-main bg-transparent"
         id="main-menu-navigation"
         data-menu="menu-navigation"
       >
@@ -43,7 +43,7 @@
             <span class="ml-2 menu-title">Dashboard</span>
           </nuxt-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <nuxt-link to="/C4G3">
             <img
               src="/img/logo.png"
@@ -53,7 +53,7 @@
             />
             <span class="ml-2 menu-title">C4G3</span>
           </nuxt-link>
-        </li>
+        </li> -->
 
         <li class="nav-item">
           <nuxt-link to="/cmi">
@@ -66,13 +66,20 @@
             <span class="ml-2 menu-title">CMI</span>
           </nuxt-link>
         </li>
+
+        <li class="nav-item ml-1">
+          <change-theme class="ml-3" />
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import ChangeTheme from '../utils/ChangeTheme.vue';
+export default {
+  components: { ChangeTheme },
+};
 </script>
 
 <style scoped>

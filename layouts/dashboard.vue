@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Sidebar />
+    <Sidebar class="ash-bg" />
+    <Navbar class="ash-bg" />
 
     <div
       class="app-content content"
       :class="{ 'ash-bg': $route.name === 'dashboard' }"
     >
       <div class="content-overlay"></div>
-      <div class="header-navbar-shadow"></div>
       <div class="content-wrapper mt-4">
         <div class="content-header row"></div>
         <div class="content-body pb-4">
@@ -21,10 +21,20 @@
   </div>
 </template>
 <script>
+import Navbar from '../components/navs/Navbar.vue';
 import Sidebar from '../components/navs/Sidebar.vue';
 
 export default {
-  components: { Sidebar },
+  head() {
+    const { darkMode } = this.$store.state;
+    return {
+      bodyAttrs: {
+        class: `vertical-layout vertical-menu-modern navbar-floating footer-static 2-columns ${darkMode &&
+          'dark-layout'}`,
+      },
+    };
+  },
+  components: { Sidebar, Navbar },
 };
 </script>
 
@@ -36,5 +46,9 @@ export default {
 
 .ash-bg {
   background-color: #f7f8fb;
+}
+
+.dark-layout .ash-bg {
+  background-color: #10163a;
 }
 </style>

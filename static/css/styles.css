@@ -163,3 +163,8 @@ section.hasLinear {
 .btn-grey {
   background-color: #252628 !important;
 }
+
+.dark-layout .btn-grey {
+  background-color: #c2c6dc !important;
+  color: #252628 !important;
+}

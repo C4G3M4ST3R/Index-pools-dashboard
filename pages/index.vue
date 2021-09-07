@@ -130,10 +130,10 @@ export default {
   data() {
     return {
       tokens: [
-        {
-          token: 'C4G3',
-          img: '/img/logo.png',
-        },
+        // {
+        //   token: 'C4G3',
+        //   img: '/img/logo.png',
+        // },
         {
           token: 'CMI',
           img: '/img/logo-cmi.png',
