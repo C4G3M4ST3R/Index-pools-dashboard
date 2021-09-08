@@ -10,12 +10,12 @@
       <div class="card-content d-flex justify-content-between p-5">
         <div>
           <h3 class="mb-3">
-            Amplify your portfolio and
+            Invest safely smartly 
             <br />
-            soar to new heights with C4G3 Indices.
+            in meme tokens with CAG3 Meme Indices.
           </h3>
           <p>
-            Connect your wallet and browse through our
+            Gain exposure to top performing meme tokens 
             <br />
             strategies and purchase
           </p>
@@ -28,9 +28,9 @@
     </div>
 
     <div>
-      <h4>Explore</h4>
+      <h4>Index Pools</h4>
       <p class="text-grey">
-        Browse through various protocols and find the strategy
+        Browse through various Indices and find the strategy
       </p>
 
       <div class="row mt-3">
@@ -71,9 +71,9 @@
                 ></path>
               </svg>
 
-              <h4 class="my-3 text-white">What is DeFi?</h4>
+              <h4 class="my-3 text-white">What is Indexed Finance?</h4>
               <p class="text-white">
-                Get educated on DeFi and the crypto space with our
+                Get educated on Indexed financing and the crypto space with our
                 knowledgebase.
               </p>
               <div class="mt-3">
@@ -100,8 +100,7 @@
                   <div class="my-3 mx-4">
                     <h4 class="text-black">{{ token }}</h4>
                     <p class="text-grey mb-0">
-                      Access the top eight DeFi tokens by market cap, all at
-                      once.
+                      Access the top four meme tokens all at once.
                     </p>
                   </div>
                 </div>
