@@ -10,12 +10,12 @@
       <div class="card-content d-flex justify-content-between p-5">
         <div>
           <h3 class="mb-3">
-            Invest safely smartly 
+            Invest safely smartly
             <br />
             in meme tokens with CAG3 Meme Indices.
           </h3>
           <p>
-            Gain exposure to top performing meme tokens 
+            Gain exposure to top performing meme tokens
             <br />
             strategies and purchase
           </p>
@@ -212,7 +212,7 @@ export default {
 
 .card.other .card-footer {
   border-top: 1px solid #f8f9fa;
-  background: #f8f9fa;
+  background-color: #f8f9fa;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
@@ -236,6 +236,28 @@ export default {
 }
 
 .card.other:hover .card-footer a {
-  color: white;
+  color: white !important;
+}
+
+.dark-layout .text-grey,
+.dark-layout .card.other p {
+  color: #c2c6dc !important;
+}
+
+.dark-layout .card.other h4 {
+  color: #ebeefd;
+}
+
+.dark-layout .card.other .card-footer {
+  background-color: #10163a;
+  border-color: #10163a;
+}
+
+.dark-layout .card.other .card-footer a {
+  color: #c2c6dc;
+}
+
+.dark-layout .btn-outline-white {
+  border-color: #fff !important;
 }
 </style>

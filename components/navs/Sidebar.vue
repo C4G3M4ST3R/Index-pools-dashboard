@@ -38,7 +38,7 @@
         data-menu="menu-navigation"
       >
         <li class="nav-item">
-          <nuxt-link to="/dashboard">
+          <nuxt-link to="/">
             <i class="feather icon-home mx-2"></i>
             <span class="ml-2 menu-title">Dashboard</span>
           </nuxt-link>
