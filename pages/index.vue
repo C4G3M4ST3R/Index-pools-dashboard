@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="text-right">
-      <button class="btn-grey px-4 py-2 text-white">
+      <button class="btn-grey px-4 py-2 text-white" @click.prevent="connect">
         Connect Wallet
       </button>
     </div>
@@ -19,7 +19,10 @@
             <br />
             strategies and purchase
           </p>
-          <button class="btn-grey px-4 py-2 text-white">
+          <button
+            class="btn-grey px-4 py-2 text-white"
+            @click.prevent="connect"
+          >
             Connect Wallet
           </button>
         </div>

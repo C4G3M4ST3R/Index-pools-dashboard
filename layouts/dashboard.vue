@@ -18,11 +18,14 @@
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
+
+    <connect-wallet :key="connectKey + 'e'" @close.once="connectKey++" />
   </div>
 </template>
 <script>
 import Navbar from '../components/navs/Navbar.vue';
 import Sidebar from '../components/navs/Sidebar.vue';
+import ConnectWallet from '../components/utils/ConnectWallet';
 
 export default {
   head() {
@@ -34,7 +37,12 @@ export default {
       },
     };
   },
-  components: { Sidebar, Navbar },
+  components: { Sidebar, Navbar, ConnectWallet },
+  data() {
+    return {
+      connectKey: 42,
+    };
+  },
 };
 </script>
 

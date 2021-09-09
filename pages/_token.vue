@@ -129,7 +129,10 @@
               </div>
 
               <div>
-                <button class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white">
+                <button
+                  class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white"
+                  @click.prevent="connect"
+                >
                   Connect Wallet
                 </button>
               </div>
