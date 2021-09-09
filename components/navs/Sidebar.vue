@@ -6,7 +6,7 @@
     <div class="navbar-header mt-5 mb-3">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <nuxt-link class="navbar-brand" to="/dashboard">
+          <nuxt-link class="navbar-brand" to="/">
             <div class="brand-logo d-flex w-100 justify-content-center">
               <img
                 src="/img/logo.png"
