@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div class="text-right">
+    <!-- <div class="text-right">
       <button class="btn-grey px-4 py-2 text-white" @click.prevent="connect">
         Connect Wallet
       </button>
-    </div>
+    </div> -->
 
     <div class="card shadow my-5 px-3 hero rounded-10">
       <div class="card-content d-flex justify-content-between p-5">
         <div>
           <h3 class="mb-3">
-            Invest safely smartly
+            Invest Safely and Smartly
             <br />
             in meme tokens with CAG3 Meme Indices.
           </h3>
@@ -23,7 +23,7 @@
             class="btn-grey px-4 py-2 text-white"
             @click.prevent="connect"
           >
-            Connect Wallet
+            Connect MetaMask
           </button>
         </div>
         <div></div>
@@ -33,7 +33,7 @@
     <div>
       <h4>Index Pools</h4>
       <p class="text-grey">
-        Browse through various Indices and find the strategy
+        Browse through various memeverse
       </p>
 
       <div class="row mt-3">
@@ -74,7 +74,7 @@
                 ></path>
               </svg>
 
-              <h4 class="my-3 text-white">What is Indexed Finance?</h4>
+              <h4 class="my-3 text-white">About CMI</h4>
               <p class="text-white">
                 Get educated on Indexed financing and the crypto space with our
                 knowledgebase.
@@ -82,7 +82,8 @@
               <div class="mt-3">
                 <a
                   type="button"
-                  href="#"
+                  href="https://docs.cag3.io"
+                  target="_blank" 
                   class="btn btn-outline-white border-white rounded-pill py-2 px-4"
                 >
                   Read more
