@@ -1,9 +1,16 @@
 <template>
   <div class="container">
     <div class="text-right">
-      <button class="btn-grey px-4 py-2 text-white" @click.prevent="connect">
+      <button
+        class="btn-grey px-4 py-2 text-white"
+        v-if="!isAuthenticated"
+        @click.prevent="connect"
+      >
         Connect Wallet
       </button>
+      <p v-else class="my-0 text-success">
+        Connected
+      </p>
     </div>
 
     <div class="card shadow my-5 px-3 hero rounded-10">
@@ -21,10 +28,15 @@
           </p>
           <button
             class="btn-grey px-4 py-2 text-white"
+            v-if="!isAuthenticated"
             @click.prevent="connect"
           >
             Connect Wallet
           </button>
+          <div class="d-flex" v-else>
+            <img :src="walletIcon" height="30" class="mr-2" />
+            <h6 class="text-uppercase mr-4 mt-2">{{ userAddress }}</h6>
+          </div>
         </div>
         <div></div>
       </div>
@@ -176,13 +188,6 @@ export default {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
-}
-
-.hero img {
-  height: 350px;
-  position: absolute;
-  right: 30px;
-  top: -50px;
 }
 
 .btn-outline-white {

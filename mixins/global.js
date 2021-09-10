@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     ...mapState(['user']),
-    ...mapGetters(['isAuthenticated', 'assessmentOngoing']),
+    ...mapGetters(['isAuthenticated']),
     isAboutPage() {
       return this.$route.name === 'about-us';
     },
@@ -39,6 +39,18 @@ export default {
       return toMatch.some(toMatchItem => {
         return navigator.userAgent.match(toMatchItem);
       });
+    },
+    walletIcon() {
+      return this.user.wallet === 'metamask'
+        ? '/img/connect/metamask-fox.svg'
+        : '/img/connect/walletconnect-logo.svg';
+    },
+    userAddress() {
+      const { ethAddress: address } = this.user;
+      const first5 = address?.slice(0, 5);
+      const last4 = address?.slice(-5);
+
+      return `${first5 || ''}....${last4 || ''}`;
     },
   },
   methods: {

@@ -1,12 +1,6 @@
 <template>
   <main>
     <div class="container">
-      <div class="text-right">
-        <button class="btn-grey px-4 py-2 text-white">
-          Connect Wallet
-        </button>
-      </div>
-
       <nav
         aria-label="breadcrumbs"
         class="has-succeeds-separator breadcrumb border-0 my-5"
@@ -119,22 +113,42 @@
         <div class="col px-0 mt-3">
           <div class="card p-4  other">
             <div class="card-content my-5 text-center">
-              <div class="mb-5 mx-3">
-                <h4>
-                  You are not connected to your wallet.
-                </h4>
-                <p>
-                  To purchase a token your wallet should be connected.
-                </p>
-              </div>
+              <template v-if="!isAuthenticated">
+                <div class="mb-5 mx-3">
+                  <h4>
+                    You are not connected to your wallet.
+                  </h4>
+                  <p>
+                    To purchase a token your wallet should be connected.
+                  </p>
+                </div>
 
-              <div>
-                <button
-                  class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white"
-                  @click.prevent="connect"
-                >
-                  Connect Wallet
-                </button>
+                <div>
+                  <button
+                    class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white"
+                    @click.prevent="connect"
+                  >
+                    Connect Wallet
+                  </button>
+                </div>
+              </template>
+
+              <div class="mb-5 mx-3" v-else>
+                <img :src="walletIcon" height="75" class="mb-4" />
+                <h4 class="text-uppercase">{{ userAddress }}</h4>
+                <p>
+                  You are connected to your
+                  <span class="text-capitalize">{{ user.wallet }}</span> wallet.
+                </p>
+
+                <div class="mt-4">
+                  <button
+                    class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white"
+                    @click.prevent="logout"
+                  >
+                    Logout
+                  </button>
+                </div>
               </div>
             </div>
           </div>

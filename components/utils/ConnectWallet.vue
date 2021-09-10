@@ -30,34 +30,14 @@
         </div>
 
         <div class="modal-body p-0 px-lg-3 py-lg-5">
-          <template v-if="!isMobile">
-            <div class="row my-3" v-if="!loading">
-              <div class="col-12 col-sm-6 text-center">
-                <div class="wallet-img mx-auto">
-                  <img
-                    src="/img/connect/metamask.svg"
-                    @click="connectMetaMask"
-                  />
-                </div>
-              </div>
-
-              <div class="col text-center mt-3 mt-lg-0">
-                <div class="wallet-img mx-auto mt-2">
-                  <img
-                    src="/img/connect/wallet-connect.png"
-                    height="35"
-                    @click="connectWalletConnect"
-                  />
-                </div>
+          <div class="row my-3" v-if="!loading">
+            <div class="col-12 text-center">
+              <div class="wallet-img mx-auto">
+                <img src="/img/connect/metamask.svg" @click="connectMetaMask" />
               </div>
             </div>
-            <Loader class="py-5" v-else />
-          </template>
-          <div class="text-center" v-else>
-            <img src="/img/connect/forbidden.svg" height="100" class="my-3" />
-            <h5>Sorry, this event is unavailable</h5>
-            <p>Please visit our desktop website to connect</p>
           </div>
+          <Loader class="py-5" v-else />
         </div>
         <div class="modal-footer d-none d-md-block border-0 ml-5 pl-5">
           <div

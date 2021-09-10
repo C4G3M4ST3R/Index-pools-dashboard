@@ -5,8 +5,7 @@
       width="25"
       height="25"
       viewBox="0 0 22 29"
-      fill="#c2c6dc"
-      v-if="darkMode"
+      v-if="!darkMode"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -18,6 +17,7 @@
       width="25"
       height="25"
       class="inline-block align-middle"
+      fill="#c2c6dc"
       viewBox="0 0 28 27"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,7 +26,7 @@
       />
     </svg>
     <span class="mode ml-xl-3">
-      {{ darkMode ? 'Dark' : 'Light' }}
+      {{ !darkMode ? 'Dark' : 'Light' }}
     </span>
   </button>
 </template>
