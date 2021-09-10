@@ -128,7 +128,7 @@
                     class="btn-grey px-3 px-md-4 px-xl-5 py-2 text-white"
                     @click.prevent="connect"
                   >
-                    Connect Wallet
+                    Add CMI
                   </button>
                 </div>
               </template>
