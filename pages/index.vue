@@ -81,8 +81,7 @@
 
               <h4 class="my-3 text-white">About CMI</h4>
               <p class="text-white">
-                Get educated on Indexed financing and the crypto space with our
-                knowledgebase.
+                Learn more about our Meme Index financing with our KnowledgeBase.
               </p>
               <div class="mt-3">
                 <a
