@@ -166,10 +166,14 @@ export default {
 
 .hero {
   background-color: #edf1ff;
-  background-image: url('https://tokens.amun.com/images/dashboard/ship.png');
+  background-image: url('/img/illustrations/standing-1.jpg');
   background-position: right 15px bottom -88px;
   background-repeat: no-repeat;
   background-size: 520px 530px;
+
+  background-position: right 15px bottom 15px;
+  background-repeat: no-repeat;
+  background-size: 450px 315px;
 }
 
 .hero h3 {
