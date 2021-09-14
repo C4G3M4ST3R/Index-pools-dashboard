@@ -18,7 +18,7 @@
             </div>
           </nuxt-link>
         </li>
-        <li class="nav-item nav-toggle">
+        <li class="nav-item nav-toggle d-none">
           <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
             <i
               class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"

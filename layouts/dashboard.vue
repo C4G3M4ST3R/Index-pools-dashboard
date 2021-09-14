@@ -57,6 +57,6 @@ export default {
 }
 
 .dark-layout .ash-bg {
-  background-color: #10163a;
+  background-color: #10163ad1;
 }
 </style>
