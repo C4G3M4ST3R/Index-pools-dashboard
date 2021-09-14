@@ -63,7 +63,7 @@
               alt="logo"
               class="mr-2 rounded-circle"
             />
-            <span class="ml-2 menu-title">CMI</span>
+            <span class="menu-title">CMI</span>
           </nuxt-link>
         </li>
 
@@ -93,7 +93,7 @@ export default {
 }
 
 .main-menu.menu-light .navigation > li a i {
-  font-size: 20px;
+  font-size: 22px !important;
 }
 
 .main-menu.menu-light
@@ -104,7 +104,26 @@ export default {
   color: #fff;
 }
 
+body.dark-layout
+  .main-menu.menu-light
+  .navigation
+  > li
+  a.nuxt-link-exact-active.nuxt-link-active
+  span {
+  color: #fff;
+}
+
 .main-menu.menu-light .navigation > li a:hover {
   background-color: #f2f2f3;
+}
+
+body.dark-layout .main-menu-content .navigation-main .nav-item i,
+body.dark-layout .main-menu-content .navigation-main .nav-item span {
+  color: #fff;
+}
+
+.dark-layout .main-menu.menu-light .navigation > li a:hover i,
+.dark-layout .main-menu.menu-light .navigation > li a:hover span {
+  color: #565656;
 }
 </style>

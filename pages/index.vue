@@ -6,7 +6,10 @@
       </p>
     </div>
 
-    <div class="card shadow my-5 px-3 hero rounded-10">
+    <div
+      class="card shadow my-5 px-3 hero rounded-10"
+      :style="{ backgroundImage: `url(${backgroundImage})` }"
+    >
       <div class="card-content d-flex justify-content-between p-5">
         <div>
           <h3 class="mb-3">
@@ -81,7 +84,8 @@
 
               <h4 class="my-3 text-white">About CMI</h4>
               <p class="text-white">
-                Learn more about our Meme Index financing with our KnowledgeBase.
+                Learn more about our Meme Index financing with our
+                KnowledgeBase.
               </p>
               <div class="mt-3">
                 <a
@@ -146,7 +150,24 @@ export default {
           img: '/img/logo-cmi.png',
         },
       ],
+      number: '07',
     };
+  },
+  computed: {
+    backgroundImage() {
+      return `/img/illustrations/cage-${this.number}.png`;
+    },
+  },
+  mounted() {
+    function randomIntFromInterval(min, max) {
+      // min and max included
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    setInterval(() => {
+      const data = ['04', '07', '08', '09', '10', '11'];
+      const key = randomIntFromInterval(1, data.length - 1);
+      this.number = data[key];
+    }, 5000);
   },
 };
 </script>
@@ -164,15 +185,11 @@ export default {
 }
 
 .hero {
-  background-color: #edf1ff;
-  background-image: url('/img/illustrations/standing-1.jpg');
-  background-position: right 15px bottom -88px;
+  background-color: hsl(227, 100%, 96%);
+  /* background-image: url(''); */
+  background-position: right 0px top -20px;
   background-repeat: no-repeat;
-  background-size: 520px 530px;
-
-  background-position: right 15px bottom 15px;
-  background-repeat: no-repeat;
-  background-size: 450px 315px;
+  background-size: 350px 350px;
 }
 
 .hero h3 {
