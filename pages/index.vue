@@ -84,7 +84,8 @@
 
               <h4 class="my-3 text-white">About CMI</h4>
               <p class="text-white">
-                Learn more about our Meme Index financing with our
+                Learn more about 
+                 <br />Meme Index financing with our
                 KnowledgeBase.
               </p>
               <div class="mt-3">
@@ -150,7 +151,7 @@ export default {
           img: '/img/logo-cmi.png',
         },
       ],
-      number: '07',
+      number: '04',
     };
   },
   computed: {
