@@ -164,7 +164,8 @@ export default {
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
     setInterval(() => {
-      const data = ['04', '07', '08', '09', '10', '11'];
+      const data = ['07', '10', '11'];
+      // const data = ['04', '07', '08', '09', '10', '11'];
       const key = randomIntFromInterval(1, data.length - 1);
       this.number = data[key];
     }, 5000);
@@ -187,7 +188,7 @@ export default {
 .hero {
   background-color: hsl(227, 100%, 96%);
   /* background-image: url(''); */
-  background-position: right 0px top -20px;
+  background-position: right 0px top -15px;
   background-repeat: no-repeat;
   background-size: 350px 350px;
 }
