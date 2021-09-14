@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <Sidebar class="ash-bg" />
     <Navbar class="ash-bg" />
 
@@ -58,5 +58,13 @@ export default {
 
 .dark-layout .ash-bg {
   background-color: #10163ad1;
+}
+
+.dark-layout .main {
+  background-image: url('/img/illustrations/landed-2.jpeg');
+  background-image: linear-gradient(to bottom, #262c4999, #414561b5),
+    url('/img/illustrations/landed-2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

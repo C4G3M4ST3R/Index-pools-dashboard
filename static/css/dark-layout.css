@@ -3,11 +3,6 @@
 =========================================================*/
 body.dark-layout {
   background-color: #262c49;
-  background-image: url('../img/illustrations/landed-2.jpeg');
-  background-image: linear-gradient(to bottom, #262c4999, #414561b5),
-    url('../img/illustrations/landed-2.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
   /********* UI ELEMENTS *********/
   /********* COMPONENTS *********/
   /********** FORMS **********/
