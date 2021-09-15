@@ -61,9 +61,9 @@ export default {
 }
 
 .dark-layout .main {
-  background-image: url('/img/illustrations/landed-2.jpeg');
+  background-image: url('/img/illustrations/landed-2.png');
   background-image: linear-gradient(to bottom, #262c4999, #414561b5),
-    url('/img/illustrations/landed-2.jpeg');
+    url('/img/illustrations/landed-2.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
