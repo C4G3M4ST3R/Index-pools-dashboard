@@ -82,7 +82,7 @@
                 ></path>
               </svg>
 
-              <h4 class="my-3 text-white">About CMI</h4>
+              <h4 class="my-3 text-white">About</h4>
               <p class="text-white">
                 Learn more about 
                  <br />Meme Index financing with our
@@ -142,13 +142,17 @@ export default {
   data() {
     return {
       tokens: [
-        // {
-        //   token: 'C4G3',
-        //   img: '/img/logo.png',
-        // },
+        {
+          token: 'C4G3',
+          img: '/img/logo.png',
+        },
         {
           token: 'CMI',
           img: '/img/logo-cmi.png',
+        },
+        {
+          token: 'CGT',
+          img: '/img/logo-cgt.png',
         },
       ],
       number: '04',
