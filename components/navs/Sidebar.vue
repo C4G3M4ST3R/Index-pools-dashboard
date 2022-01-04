@@ -515,9 +515,17 @@ body.dark-layout .main-menu-content .navigation-main .nav-item span {
   color: #fff;
 }
 
+.dark-layout
+  .main-menu.menu-light
+  .navigation
+  > li.nav-item.has-sub:hover:after,
 .dark-layout .main-menu.menu-light .navigation > li a:hover i,
 .dark-layout .main-menu.menu-light .navigation > li a:hover span {
   color: #565656;
+}
+
+.dark-layout .main-menu.menu-light .navigation > li a:hover svg {
+  fill: #565656;
 }
 
 .coin-price {
