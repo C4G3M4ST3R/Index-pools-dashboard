@@ -39,7 +39,7 @@
     </div>
 
     <div>
-      <h4>Index Pools</h4>
+      <h4>Ecosystem</h4>
       <p class="text-grey">
         Browse through various memeverse
       </p>
