@@ -319,7 +319,7 @@
           </nuxt-link>
         </li>
 
-        <li class="nav-item px-0">
+        <!-- <li class="nav-item px-0">
           <a href="#" rel="noreferrer noopener">
             <img
               src="https://paladinsec.co/pld/assets/audited-by-paladin-long.svg"
@@ -327,7 +327,7 @@
               height="40"
             />
           </a>
-        </li>
+        </li> -->
       </ul>
 
       <div class="footer-bottom p-4">
