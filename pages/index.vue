@@ -18,7 +18,7 @@
             in meme tokens with CAG3 Meme Indices.
           </h3>
           <p>
-            Gain exposure to top performing meme tokens
+            Gain exposure to top performing meme token
             <br />
             strategies and purchase
           </p>
