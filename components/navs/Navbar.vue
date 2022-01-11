@@ -9,7 +9,16 @@
           id="navbar-mobile"
         >
           <ul class="nav navbar-nav bookmark-icons mt-1">
-            <li class="nav-item">
+            <li class="nav-item d-flex">
+              <div class="d-xl-none mr-2">
+                <button
+                  style="font-size: 24px"
+                  class="nav-link bg-transparent mt-2 p-0"
+                  @click.prevent="toggleMobileMenu"
+                >
+                  <i class="feather icon-menu"></i>
+                </button>
+              </div>
               <nuxt-link class="navbar-brand py-0" to="/dashboard">
                 <div class="brand-logo d-flex w-100 justify-content-center">
                   <img

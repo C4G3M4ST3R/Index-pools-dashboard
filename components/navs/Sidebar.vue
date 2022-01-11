@@ -29,6 +29,10 @@
       </ul>
     </div>
 
+    <button class="bg-transparent close-menu" @click="toggleMobileMenu">
+      <i class="feather icon-x d-block d-xl-none text-primary"> </i>
+    </button>
+
     <div class="shadow-bottom"></div>
 
     <div class="main-menu-content mt-5">
@@ -495,6 +499,13 @@ export default {
 </script>
 
 <style scoped>
+.main-menu.menu-light {
+  top: 0;
+}
+.vertical-overlay-menu .main-menu.menu-light {
+  backdrop-filter: blur(3px);
+}
+
 .main-menu.menu-light .navigation {
   max-height: 65vh;
   overflow-y: scroll;
@@ -588,12 +599,13 @@ body.dark-layout .main-menu.menu-light .navigation > li.nav-item svg {
   transition: all 0.35s ease 0.35s !important;
 }
 
+body.dark-layout .close-menu i,
 body.dark-layout .coin-price p,
 body.dark-layout .main-menu.menu-light .socials li a i,
 body.dark-layout .main-menu.menu-light .navigation > li.nav-item.has-sub:after,
 body.dark-layout .main-menu-content .navigation-main .nav-item i,
 body.dark-layout .main-menu-content .navigation-main .nav-item span {
-  color: #fff;
+  color: #fff !important;
 }
 
 .dark-layout
@@ -613,12 +625,27 @@ body.dark-layout .main-menu-content .navigation-main .nav-item span {
   max-width: 150px;
 }
 
+.close-menu i,
 .coin-price p {
-  color: #565656;
+  color: #565656 !important;
   font-size: 24px;
 }
 
 .coin-price:hover img {
   transform: scale(1.25);
+}
+
+.close-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.vertical-overlay-menu
+  .main-menu
+  .navigation
+  li.has-sub
+  > a:not(.mm-next):after {
+  content: ' ';
 }
 </style>
