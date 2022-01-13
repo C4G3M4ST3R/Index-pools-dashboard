@@ -45,7 +45,7 @@
       </p>
 
       <div class="row mt-3">
-        <div class="col-12 col-md-4">
+        <!-- <div class="col-12 col-md-4">
           <a href="#">
             <div class="card first p-5 bg-primary">
               <svg
@@ -84,7 +84,7 @@
 
               <h4 class="my-3 text-white">About</h4>
               <p class="text-white">
-                Learn more about Meme Index financing with our Knowledgebase.
+                Learn more about Meme Index financing.
               </p>
               <div class="mt-3">
                 <a
@@ -98,7 +98,7 @@
               </div>
             </div>
           </a>
-        </div>
+        </div> -->
 
         <div class="col-12 col-md-4">
           <a href="#">
@@ -201,15 +201,17 @@ export default {
         {
           token: 'C4G3',
           img: '/img/logo.png',
-          desc: 'Access the top four meme tokens all at once.'
+          // desc: 'Comunity Token '
         },
         {
           token: 'CMI',
           img: '/img/logo-cmi.png',
+          // desc: 'Cage Meme Index.'
         },
         {
           token: 'CGT',
           img: '/img/logo-cgt.png',
+          // desc: 'Cage Governance Token'
         },
       ],
       number: '04',
