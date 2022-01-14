@@ -9,7 +9,7 @@
           <nuxt-link class="navbar-brand" to="/">
             <div class="brand-logo d-flex w-100 justify-content-center">
               <img
-                src="/img/logo.png"
+                src="/img/logo-cmi.png"
                 height="50"
                 alt="logo"
                 class="mr-2 rounded-circle"
@@ -79,7 +79,7 @@
                 d="M18.86 4.86003L21.65 7.65003C21.84 7.84003 21.84 8.16003 21.64 8.35003L18.85 11.14C18.54 11.46 18 11.24 18 10.79V9.00003H4C3.45 9.00003 3 8.55003 3 8.00003C3 7.45003 3.45 7.00003 4 7.00003H18V5.21003C18 4.76003 18.54 4.54003 18.86 4.86003ZM5.14001 19.14L2.35001 16.35C2.16001 16.16 2.16001 15.84 2.36001 15.65L5.15001 12.86C5.46001 12.54 6.00001 12.76 6.00001 13.21V15H20C20.55 15 21 15.45 21 16C21 16.55 20.55 17 20 17H6.00001V18.79C6.00001 19.24 5.46001 19.46 5.14001 19.14Z"
               ></path>
             </svg>
-            <span class="ml-2 menu-title">Tokens</span>
+            <span class="ml-2 menu-title">Trade</span>
           </a>
           <ul class="menu-content">
             <li>
@@ -157,49 +157,7 @@
         </li>
 
  
-        <li class="nav-item has-sub">
-          <a href="#">
-            <svg
-              viewBox="0 0 24 24"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2"
-            >
-              <path
-                d="M5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7V18C3 19.1046 3.89543 20 5 20H20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18H5V7Z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M19 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11H10V10C10 9.44772 10.4477 9 11 9H14V7C14 6.44772 14.4477 6 15 6H19C19.5523 6 20 6.44772 20 7V16C20 16.5523 19.5523 17 19 17ZM16 8H18V15H16V8ZM12 15H14V11H12V15ZM10 13H8V15H10V13Z"
-              ></path>
-            </svg>
-            <span class="ml-2 menu-title">Charts</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  C4G3
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  CGT
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  CMI
-                </span>
-              </nuxt-link>
-            </li>
-          </ul>
-        </li>
+    
 
         <li class="nav-item has-sub">
           <a href="#">
@@ -248,7 +206,7 @@
           </ul>
         </li>
 
-        <li class="nav-item has-sub">
+        <!-- <li class="nav-item has-sub">
           <a href="#">
             <svg
               viewBox="0 0 24 24"
@@ -293,16 +251,6 @@
               </nuxt-link>
             </li>
           </ul>
-        </li>
-
-        <!-- <li class="nav-item px-0">
-          <a href="#" rel="noreferrer noopener">
-            <img
-              src="https://paladinsec.co/pld/assets/audited-by-paladin-long.svg"
-              alt="audit"
-              height="40"
-            />
-          </a>
         </li> -->
       </ul>
 
