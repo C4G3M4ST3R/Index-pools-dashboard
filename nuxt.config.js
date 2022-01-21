@@ -2,7 +2,7 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  ssr: false,
+  // ssr: true,
   head: {
     title: 'Cag3',
     meta: [
@@ -76,9 +76,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/vuex-persist',
+    { src: '~/plugins/vuex-persist', mode: 'client' },
     '~/plugins/moment',
-    '~/plugins/highcharts.js',
+    { src: '~/plugins/highcharts.js', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -90,12 +90,17 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
+    '@nuxt/http',
     '@nuxtjs/axios',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://api.c4g3.io',
+    baseURL: '/',
+  },
+
+  serverMiddleware: {
+    '/api': '~/server',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

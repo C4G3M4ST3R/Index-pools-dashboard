@@ -253,34 +253,15 @@
             <span class="ml-2 menu-title">Charts</span>
           </a>
           <ul class="menu-content">
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
+            <template v-for="(token, i) in tokens">
+              <li :key="i">
+                <nuxt-link :to="`/chart/${token.symbol}`">
+                  <span class="menu-item text-capitalize">
+                    {{ token.name }}
+                  </span>
+                </nuxt-link>
+              </li>
+            </template>
           </ul>
         </li>
 
@@ -599,13 +580,12 @@ body.dark-layout .main-menu.menu-light .navigation > li.nav-item svg {
   transition: all 0.35s ease 0.35s !important;
 }
 
-body.dark-layout .close-menu i,
 body.dark-layout .coin-price p,
 body.dark-layout .main-menu.menu-light .socials li a i,
 body.dark-layout .main-menu.menu-light .navigation > li.nav-item.has-sub:after,
 body.dark-layout .main-menu-content .navigation-main .nav-item i,
 body.dark-layout .main-menu-content .navigation-main .nav-item span {
-  color: #fff !important;
+  color: #fff;
 }
 
 .dark-layout
@@ -619,6 +599,16 @@ body.dark-layout .main-menu-content .navigation-main .nav-item span {
 
 .dark-layout .main-menu.menu-light .navigation > li a:hover svg {
   fill: #565656;
+}
+
+body.dark-layout
+  .main-menu-content
+  .navigation-main
+  .nav-item
+  .menu-content
+  li:not(.active)
+  a:hover {
+  color: var(--primary-color);
 }
 
 .coin-price {
@@ -641,11 +631,15 @@ body.dark-layout .main-menu-content .navigation-main .nav-item span {
   right: 15px;
 }
 
-.vertical-overlay-menu
-  .main-menu
-  .navigation
-  li.has-sub
-  > a:not(.mm-next):after {
-  content: ' ';
+.close-menu i {
+  color: #565656 !important;
+}
+
+body.dark-layout .close-menu i {
+  color: #fff !important;
+}
+
+.main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  content: '' !important;
 }
 </style>
