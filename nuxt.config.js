@@ -62,8 +62,8 @@ export default {
     // Scripts
     script: [
       { src: '/js/jquery.min.js' },
-      { src: '/js/bootstrap.min.js' },
       { src: '/js/popper.min.js' },
+      { src: '/js/bootstrap.min.js' },
       { src: '/js/app.js' },
       { src: '/js/app-menu.js' },
       { src: '/js/slick.min.js' },

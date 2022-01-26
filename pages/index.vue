@@ -39,12 +39,67 @@
     </div>
 
     <div>
-      <h4>Index Pools</h4>
+      <h4>Ecosystem</h4>
       <p class="text-grey">
         Browse through various memeverse
       </p>
 
       <div class="row mt-3">
+        <!-- <div class="col-12 col-md-4">
+          <a href="#">
+            <div class="card first p-5 bg-primary">
+              <svg
+                width="137"
+                height="105"
+                viewBox="0 0 137 105"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="book"
+              >
+                <path
+                  d="M134.203 7.84H130.923L132.304 10.039V93.518H68.5H4.661V10.004L6.042 7.806H2.7966C1.2429 7.806 0 9.062 0 10.632V95.508C0 97.078 1.2429 98.334 2.7966 98.334H59.834C60.87 102.173 64.357 105 68.5 105C72.643 105 76.13 102.173 77.166 98.334H134.203C135.757 98.334 137 97.078 137 95.508V10.667C137 9.097 135.757 7.84 134.203 7.84Z"
+                  fill="#F27047"
+                ></path>
+                <path
+                  d="M68.5 10.214L70.399 9.271C71.4 8.783 72.436 8.294 73.472 7.84H68.5H63.528C64.564 8.294 65.6 8.783 66.601 9.271L68.5 10.214Z"
+                  fill="#F27047"
+                ></path>
+                <path
+                  d="M4.66101 93.484H68.5H132.339V10.004L130.958 7.806L128.679 4.246V85.038C109.31 79.314 88.56 81.094 70.399 90.029L68.5 90.971V10.214V91.006L66.601 90.063C48.475 81.129 27.69 79.349 8.32101 85.073V4.281L6.04201 7.841L4.66101 10.039V93.484Z"
+                  fill="#CCCCCC"
+                ></path>
+                <path
+                  d="M8.32098 85.073C27.69 79.349 48.441 81.129 66.601 90.063L68.5 91.006V10.214L66.601 9.271C65.6 8.783 64.564 8.294 63.528 7.841C46.127 0.163 26.62 -1.09401 8.35599 4.28099L8.32098 85.073Z"
+                  fill="#F2F2F2"
+                ></path>
+                <path
+                  d="M68.5 10.214V91.006L70.399 90.063C70.399 48.079 90.182 8.399 108.516 1.035C96.57 0.651002 84.589 2.955 73.472 7.841C72.436 8.294 71.4 8.783 70.399 9.271L68.5 10.214Z"
+                  fill="#E6E6E6"
+                ></path>
+                <path
+                  d="M70.399 90.063C88.525 81.129 109.31 79.349 128.679 85.073V4.281C122.084 2.326 115.283 1.244 108.516 1.035C90.182 8.399 70.399 48.079 70.399 90.063Z"
+                  fill="#F2F2F2"
+                ></path>
+              </svg>
+
+              <h4 class="my-3 text-white">About</h4>
+              <p class="text-white">
+                Learn more about Meme Index financing.
+              </p>
+              <div class="mt-3">
+                <a
+                  type="button"
+                  href="https://manual.cag3.io"
+                  target="_blank"
+                  class="btn btn-outline-white border-white rounded-pill py-2 px-4"
+                >
+                  Read more
+                </a>
+              </div>
+            </div>
+          </a>
+        </div> -->
+
         <div class="col-12 col-md-4">
           <a href="#">
             <div class="card first p-5 bg-primary">
@@ -82,38 +137,37 @@
                 ></path>
               </svg>
 
-              <h4 class="my-3 text-white">About CMI</h4>
+              <h4 class="my-3 text-white">Indices</h4>
               <p class="text-white">
-                Learn more about 
-                 <br />Meme Index financing with our
-                KnowledgeBase.
+                Access top
+                <br />Meme Indices all at once.
               </p>
               <div class="mt-3">
                 <a
                   type="button"
-                  href="https://docs.cag3.io"
+                  href="https://manual.cag3.io"
                   target="_blank"
                   class="btn btn-outline-white border-white rounded-pill py-2 px-4"
                 >
-                  Read more
+                  Visit Tokensets
                 </a>
               </div>
             </div>
           </a>
         </div>
 
-        <template v-for="({ token, img }, i) in tokens">
-          <div class="col-12 col-md-4" :key="i">
-            <nuxt-link :to="`/${token}`">
+        <template v-for="{ symbol, img, name } in tokens">
+          <div class="col-12 col-md-4" :key="symbol">
+            <nuxt-link :to="`/${symbol}`">
               <div class="card other p-0">
                 <div class="card-body px-4 py-4 text-center">
                   <div class="my-3">
                     <img :src="img" height="150" />
                   </div>
                   <div class="my-3 mx-4">
-                    <h4 class="text-black">{{ token }}</h4>
+                    <h4 class="text-black">{{ symbol }}</h4>
                     <p class="text-grey mb-0">
-                      Access the top four meme tokens all at once.
+                      {{ name }}
                     </p>
                   </div>
                 </div>
@@ -141,16 +195,6 @@ export default {
   layout: 'dashboard',
   data() {
     return {
-      tokens: [
-        // {
-        //   token: 'C4G3',
-        //   img: '/img/logo.png',
-        // },
-        {
-          token: 'CMI',
-          img: '/img/logo-cmi.png',
-        },
-      ],
       number: '04',
     };
   },
