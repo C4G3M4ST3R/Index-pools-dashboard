@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="d-flex justify-content-between">
+    <div class="d-sm-flex justify-content-between">
       <div>
         <h3 class="mt-2">Pools</h3>
       </div>
@@ -9,13 +9,14 @@
         <p v-if="isAuthenticated" class="my-0 text-success">
           Connected
         </p>
-        <button
-          v-else
-          class="btn-grey px-4 py-2 text-white"
-          @click.prevent="connect"
-        >
-          Connect MetaMask
-        </button>
+        <div v-else>
+          <button
+            class="btn-grey px-4 py-2 text-white"
+            @click.prevent="connect"
+          >
+            Connect MetaMask
+          </button>
+        </div>
       </div>
     </div>
 

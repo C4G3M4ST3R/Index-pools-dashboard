@@ -1,7 +1,7 @@
 <template>
   <div class="row mt-5 pt-lg-5" id="basic-table">
-    <div class="col-12 pb-5 d-flex justify-content-between">
-      <div class="d-flex">
+    <div class="col-12 pb-3 pb-lg-5 d-lg-flex justify-content-between">
+      <div class="d-sm-flex">
         <div>
           <div class="custom-control custom-control-primary custom-switch">
             <input
@@ -14,7 +14,7 @@
           </div>
         </div>
 
-        <div class="ml-3 mt-n1">
+        <div class="ml-sm-3 mt-2 mt-sm-n1">
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-primary waves-effect active">
               <input type="radio" name="status" id="radio_option1" checked />
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="d-flex input-fields">
+      <div class="d-flex input-fields mt-3 mt-lg-0">
         <div class="form-group mb-0 mr-3">
           <select class="form-control w-100" id="basicSelect">
             <option selected disabled value="">
@@ -58,10 +58,10 @@
                 <th></th>
                 <th class="text-center">Earned</th>
                 <th class="text-center">APR</th>
-                <th>Liquidity</th>
-                <th></th>
-                <th>Multiplier</th>
-                <th class="text-center">Deposit Fee</th>
+                <th class="d-none d-lg-table-cell">Liquidity</th>
+                <th class="d-none d-lg-table-cell"></th>
+                <th class="d-none d-lg-table-cell">Multiplier</th>
+                <th class="text-center d-none d-lg-table-cell">Deposit Fee</th>
                 <th></th>
               </tr>
             </thead>
@@ -84,10 +84,10 @@
                   <td class="text-center">
                     <p>380.68%</p>
                   </td>
-                  <td>
+                  <td class="d-none d-lg-table-cell">
                     <p>$2,320</p>
                   </td>
-                  <td>
+                  <td class="d-none d-lg-table-cell">
                     <button
                       class="info waves-effect mb-1 bg-transparent"
                       data-toggle="tooltip"
@@ -105,7 +105,7 @@
                       </svg>
                     </button>
                   </td>
-                  <td>
+                  <td class="d-none d-lg-table-cell">
                     <div class="d-flex">
                       <p>40x</p>
                       <button
@@ -126,14 +126,16 @@
                       </button>
                     </div>
                   </td>
-                  <td class="text-center">
+                  <td class="text-center d-none d-lg-table-cell">
                     <p class="text-success">
                       0%
                     </p>
                   </td>
                   <td>
-                    <p class="text-primary">
-                      Details
+                    <p class="text-primary d-flex">
+                      <span class="d-none d-lg-block mr-1">
+                        Details
+                      </span>
 
                       <i
                         class="feather chevron"
@@ -307,6 +309,12 @@ button.info svg {
 
 .chevron {
   position: relative;
-  top: 3px;
+  top: 8px;
+}
+
+@media (max-width: 960px) {
+  .chevron {
+    top: auto;
+  }
 }
 </style>
