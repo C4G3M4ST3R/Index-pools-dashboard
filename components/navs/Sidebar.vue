@@ -148,6 +148,13 @@
           </nuxt-link>
         </li>
 
+        <li class="nav-item">
+          <a href="#" target="_blank">
+            <img src="/img/reward.png" height="20" />
+            <span class="ml-2 menu-title">Crucibles</span>
+          </a>
+        </li>
+
         <li class="nav-item has-sub">
           <a href="#">
             <svg
