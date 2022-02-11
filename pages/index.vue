@@ -173,7 +173,7 @@
                 </div>
                 <div class="card-footer px-5 py-3">
                   <nuxt-link
-                    :to="`/${token}`"
+                    :to="`/${symbol}`"
                     type="button"
                     href="#"
                     class="btn btn-block bg-transparent"
