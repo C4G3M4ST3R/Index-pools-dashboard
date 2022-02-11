@@ -139,8 +139,8 @@
 
               <h4 class="my-3 text-white">Indices</h4>
               <p class="text-white">
-                Access top 
-                 <br />Meme Indices all at once.
+                Access top
+                <br />Meme Indices all at once.
               </p>
               <div class="mt-3">
                 <a
@@ -152,24 +152,22 @@
                   Visit Tokensets
                 </a>
               </div>
-
-              
             </div>
           </a>
         </div>
 
-        <template v-for="({ token, img, desc }, i) in tokens">
-          <div class="col-12 col-md-4" :key="i">
-            <nuxt-link :to="`/${token}`">
+        <template v-for="{ symbol, img, name } in tokens">
+          <div class="col-12 col-md-4" :key="symbol">
+            <nuxt-link :to="`/${symbol}`">
               <div class="card other p-0">
                 <div class="card-body px-4 py-4 text-center">
                   <div class="my-3">
                     <img :src="img" height="150" />
                   </div>
                   <div class="my-3 mx-4">
-                    <h4 class="text-black">{{ token }}</h4>
+                    <h4 class="text-black">{{ symbol }}</h4>
                     <p class="text-grey mb-0">
-                      {{desc}}
+                      {{ name }}
                     </p>
                   </div>
                 </div>
@@ -197,23 +195,6 @@ export default {
   layout: 'dashboard',
   data() {
     return {
-      tokens: [
-        {
-          token: 'C4G3',
-          img: '/img/logo.png',
-          // desc: 'Comunity Token '
-        },
-        {
-          token: 'CMI',
-          img: '/img/logo-cmi.png',
-          // desc: 'Cage Meme Index.'
-        },
-        {
-          token: 'CGT',
-          img: '/img/logo-cgt.png',
-          // desc: 'Cage Governance Token'
-        },
-      ],
       number: '04',
     };
   },

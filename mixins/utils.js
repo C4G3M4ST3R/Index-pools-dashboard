@@ -29,6 +29,14 @@ const Utils = {
       behavior: 'smooth',
     });
   },
+
+  toggleMobileMenu() {
+    document.querySelector('body').classList.toggle('menu-open');
+    document.querySelector('.sidenav-overlay').classList.toggle('d-block');
+    document
+      .querySelector('.main-menu.menu-fixed')
+      .classList.toggle('menu-shadow');
+  },
 };
 
 export default Utils;

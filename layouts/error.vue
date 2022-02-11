@@ -5,6 +5,7 @@
         class="card auth-card bg-transparent shadow-none rounded-0 mb-0 w-100"
       >
         <div class="card-content">
+          {{ error }}
           <div class="card-body text-center">
             <template v-if="!isServerError">
               <img

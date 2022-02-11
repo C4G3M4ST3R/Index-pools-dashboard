@@ -1,6 +1,8 @@
 import Loader from '../components/utils/Loader.vue';
 import { mapGetters, mapState } from 'vuex';
 import Utils from './utils';
+import tokens from './tokens';
+
 const logo =
   'https://raw.githubusercontent.com/pie-dao/brand/master/PieDAO%20Logo/PieDAO%20Complete%20Black.png';
 const hero =
@@ -10,6 +12,7 @@ export default {
   data: () => ({
     logo,
     hero,
+    tokens,
   }),
   components: {
     Loader,
