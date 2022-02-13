@@ -6,6 +6,41 @@
 
 <script>
 export default {
+  props: {
+    chartData: Object,
+  },
+  mounted() {
+    const { labels, prices } = this.chartData;
+
+    this.chartOptions = {
+      ...this.chartOptions,
+      xAxis: {
+        categories: labels,
+        labels: {
+          // enabled: false,
+          formatter: function() {
+            return this.value; // clean, unformatted number for year
+          },
+        },
+        title: {
+          text: null,
+        },
+        gridLineDashStyle: 'longdash',
+        gridLineWidth: 2,
+      },
+      series: [
+        {
+          name: '',
+          data: prices,
+          color: '#33CAAC',
+          opacity: 0.3,
+          marker: {
+            enabled: false,
+          },
+        },
+      ],
+    };
+  },
   data() {
     return {
       chartOptions: {
@@ -28,16 +63,6 @@ export default {
           showCheckbox: true,
           backgroundColor: '#FFFFFF',
         },
-        xAxis: {
-          labels: {
-            enabled: false,
-          },
-          title: {
-            text: null,
-          },
-          gridLineDashStyle: 'longdash',
-          gridLineWidth: 2,
-        },
         yAxis: {
           labels: {
             enabled: false,
@@ -54,24 +79,6 @@ export default {
         plotOptions: {
           area: {},
         },
-        series: [
-          {
-            name: 'John',
-            data: [3, 4, 3, 5, 4, 10, 12],
-            color: '#33CAAC',
-            opacity: 0.3,
-            marker: {
-              enabled: false,
-            },
-          },
-          {
-            name: 'Jane',
-            data: [1, 3, 4, 3, 3, 5, 4],
-            color: '#0051FF',
-            type: 'areaspline',
-            opacity: 0.3,
-          },
-        ],
       },
     };
   },
