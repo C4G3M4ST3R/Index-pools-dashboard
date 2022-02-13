@@ -8,38 +8,41 @@
 export default {
   props: {
     chartData: Object,
+    token: String,
   },
   mounted() {
-    const { labels, prices } = this.chartData;
+    this.initChart();
+  },
+  watch: {
+    chartData: 'initChart',
+  },
+  methods: {
+    initChart() {
+      const { labels, prices } = this.chartData;
 
-    this.chartOptions = {
-      ...this.chartOptions,
-      xAxis: {
-        categories: labels,
-        labels: {
-          // enabled: false,
-          formatter: function() {
-            return this.value; // clean, unformatted number for year
+      this.chartOptions = {
+        ...this.chartOptions,
+        xAxis: {
+          categories: labels,
+          title: {
+            text: null,
           },
+          gridLineDashStyle: 'longdash',
+          gridLineWidth: 2,
         },
-        title: {
-          text: null,
-        },
-        gridLineDashStyle: 'longdash',
-        gridLineWidth: 2,
-      },
-      series: [
-        {
-          name: '',
-          data: prices,
-          color: '#33CAAC',
-          opacity: 0.3,
-          marker: {
-            enabled: false,
+        series: [
+          {
+            name: this.token,
+            data: prices,
+            color: '#ed1f24',
+            opacity: 0.3,
+            marker: {
+              enabled: false,
+            },
           },
-        },
-      ],
-    };
+        ],
+      };
+    },
   },
   data() {
     return {
@@ -71,7 +74,7 @@ export default {
         },
         tooltip: {
           shared: true,
-          valueSuffix: ' units',
+          pointFormat: '<b>${point.y:,.0f}</b>',
         },
         credits: {
           enabled: false,

@@ -74,7 +74,7 @@
           </div>
 
           <div class="chart text-center">
-            <chart v-if="!!chartData" :chartData="chartData" />
+            <chart v-if="!!chartData" :chartData="chartData" :token="token" />
           </div>
 
           <div class="py-5">
@@ -171,11 +171,7 @@ export default {
   async asyncData({ $http, params }) {
     const { token } = params;
 
-    const data = await $http.$get(
-      `/api/get-crypto-data?id=${token}&interval=1d`,
-    );
-
-    return { chartData: data, token };
+    return { token };
   },
   data() {
     return {
@@ -190,7 +186,7 @@ export default {
         'governance',
       ],
       currentTab: 'overview',
-      // chartData: null,
+      chartData: null,
       errorMessage: null,
     };
   },
@@ -230,6 +226,9 @@ export default {
         this.loading = false;
       }
     },
+  },
+  mounted() {
+    this.getCryptoData();
   },
 };
 </script>

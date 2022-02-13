@@ -1,21 +1,21 @@
 const months = [
-  'January',
-  'February',
-  'March',
-  'April',
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
   'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ];
 
 export default {
   formatDate(date) {
-    return `${months[new Date(date).getMonth()]} ${new Date(
+    return `${months[new Date(date).getMonth()].toUpperCase()} ${new Date(
       date,
     ).getFullYear()}`;
   },

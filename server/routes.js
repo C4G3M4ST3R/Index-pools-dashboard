@@ -23,9 +23,14 @@ router.get('/get-crypto-data', async (req, res, next) => {
         else if (['all', '1y'].includes(interval.toLowerCase()))
           return utils.formatDate(date);
 
-        return date.toDateString().slice(4, 10);
+        return date
+          .toDateString()
+          .toUpperCase()
+          .slice(4, 10);
       }),
-      prices: prices.map(key => key.actual_price_end),
+      prices: prices.map(
+        key => Math.round(Number(key.actual_price_end) * 100) / 100,
+      ),
     });
 
     // throw new Error();
