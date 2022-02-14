@@ -6,6 +6,44 @@
 
 <script>
 export default {
+  props: {
+    chartData: Object,
+    token: String,
+  },
+  mounted() {
+    this.initChart();
+  },
+  watch: {
+    chartData: 'initChart',
+  },
+  methods: {
+    initChart() {
+      const { labels, prices } = this.chartData;
+
+      this.chartOptions = {
+        ...this.chartOptions,
+        xAxis: {
+          categories: labels,
+          title: {
+            text: null,
+          },
+          gridLineDashStyle: 'longdash',
+          gridLineWidth: 2,
+        },
+        series: [
+          {
+            name: this.token,
+            data: prices,
+            color: '#ed1f24',
+            opacity: 0.3,
+            marker: {
+              enabled: false,
+            },
+          },
+        ],
+      };
+    },
+  },
   data() {
     return {
       chartOptions: {
@@ -28,16 +66,6 @@ export default {
           showCheckbox: true,
           backgroundColor: '#FFFFFF',
         },
-        xAxis: {
-          labels: {
-            enabled: false,
-          },
-          title: {
-            text: null,
-          },
-          gridLineDashStyle: 'longdash',
-          gridLineWidth: 2,
-        },
         yAxis: {
           labels: {
             enabled: false,
@@ -46,7 +74,7 @@ export default {
         },
         tooltip: {
           shared: true,
-          valueSuffix: ' units',
+          pointFormat: '<b>${point.y:,.0f}</b>',
         },
         credits: {
           enabled: false,
@@ -54,24 +82,6 @@ export default {
         plotOptions: {
           area: {},
         },
-        series: [
-          {
-            name: 'John',
-            data: [3, 4, 3, 5, 4, 10, 12],
-            color: '#33CAAC',
-            opacity: 0.3,
-            marker: {
-              enabled: false,
-            },
-          },
-          {
-            name: 'Jane',
-            data: [1, 3, 4, 3, 3, 5, 4],
-            color: '#0051FF',
-            type: 'areaspline',
-            opacity: 0.3,
-          },
-        ],
       },
     };
   },

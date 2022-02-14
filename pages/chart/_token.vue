@@ -74,7 +74,7 @@
           </div>
 
           <div class="chart text-center">
-            <chart />
+            <chart v-if="!!chartData" :chartData="chartData" :token="token" />
           </div>
 
           <div class="py-5">
@@ -171,14 +171,7 @@ export default {
   async asyncData({ $http, params }) {
     const { token } = params;
 
-    const chosenToken = tokens.find(key => key.symbol === token);
-    if (!chosenToken) return { token };
-
-    const data = await $http.$get(
-      `/api/get-crypto-data?cmc_id=${chosenToken.cmc_id}&interval=1D`,
-    );
-    console.log(data);
-    return { chartData: data, token };
+    return { token };
   },
   data() {
     return {
@@ -193,7 +186,7 @@ export default {
         'governance',
       ],
       currentTab: 'overview',
-      // chartData: null,
+      chartData: null,
       errorMessage: null,
     };
   },
@@ -217,15 +210,17 @@ export default {
 
       this.loading = true;
       this.currentRange = range;
-      if (range === '1WK') range = '7D';
+      console.log({ range });
+      // if (range === '1WK') range = '7D';
 
       try {
-        const { data } = await this.$coinmarketcap.get(
-          `/cryptocurrency/quotes/historical?id=${this.CMCId}&interval=${range}`,
+        const data = await this.$http.$get(
+          `/api/get-crypto-data?id=${this.token}&interval=${range}`,
         );
-
         console.log({ data });
+        this.chartData = data;
       } catch (e) {
+        console.log({ e });
         this.errorMessage = 'Chart data could not be retrieved';
       } finally {
         this.loading = false;
@@ -233,7 +228,7 @@ export default {
     },
   },
   mounted() {
-    // this.getCryptoData();
+    this.getCryptoData();
   },
 };
 </script>
