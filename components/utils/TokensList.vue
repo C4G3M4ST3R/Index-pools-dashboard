@@ -2,7 +2,7 @@
   <div class="modal" id="tokensList" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content p-3 p-lg-5">
-        <div class="modal-header bg-transparent">
+        <div class="modal-header bg-transparent py-0">
           <h4 class="text-dark my-0">Select a token to continue</h4>
         </div>
 
@@ -13,7 +13,13 @@
               :key="token.cmc_id"
               @click="$emit('selectToken', token.symbol)"
             >
-              <img :src="token.img" />
+              <img
+                :src="token.img"
+                :class="{
+                  smaller: !token.uniswap_link,
+                  'mx-2': token.symbol === 'ETH',
+                }"
+              />
               <span class="ml-2">{{ token.symbol }}</span>
             </button>
           </template>
@@ -24,13 +30,14 @@
 </template>
 
 <script>
+import tokens from '~/mixins/tokens';
 export default {
   props: {
     selectedToken: String,
   },
   computed: {
     filteredTokens() {
-      return this.tokens.filter(key => key.symbol !== this.selectedToken);
+      return tokens.filter(key => key.symbol !== this.selectedToken);
     },
   },
 };
@@ -39,6 +46,10 @@ export default {
 <style scoped>
 .coin-btn img {
   height: 45px;
+}
+
+.coin-btn img.smaller {
+  height: 35px;
 }
 
 .coin-btn span {

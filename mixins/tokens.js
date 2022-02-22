@@ -21,4 +21,17 @@ export default [
     uniswap_link:
       'https://v2.info.uniswap.org/token/0x8987a07ba83607a66c7351266e771fb865c9ca6c',
   },
+  {
+    name: 'Ethereum',
+    symbol: 'ETH',
+    img: '/img/tokens/eth.png',
+    uniswap_link: null,
+    chainId: '0x1',
+  },
+  {
+    name: 'Tether',
+    symbol: 'USDT',
+    img: '/img/tokens/tether.png',
+    uniswap_link: null,
+  },
 ];

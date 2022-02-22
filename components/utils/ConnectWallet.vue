@@ -63,6 +63,7 @@
 import Loader from './Loader.vue';
 import MetaMaskOnboarding from '@metamask/onboarding';
 import walletConnect from '../../web3/walletConnect';
+import Web3Service from '~/web3/Web3Service';
 
 export default {
   components: { Loader },
@@ -108,7 +109,7 @@ export default {
           if (!account) throw new Error('Unable to retrieve accounts');
 
           this.setUser({
-            ethAddress: account,
+            address: account,
             wallet: 'metamask',
             network: this.networks[networkVersion],
             networkVersion,
@@ -120,7 +121,7 @@ export default {
         }
 
         this.setUser({
-          ethAddress: selectedAddress,
+          address: selectedAddress,
           wallet: 'metamask',
           networkVersion,
           chainId,
@@ -149,10 +150,15 @@ export default {
         console.log(e);
       }
     },
-    setUser(data) {
+    async setUser(data) {
+      const walletBalance = await Web3Service.getWalletBalance(data.address);
+      const balance = parseFloat(walletBalance).toFixed(8);
+      console.log({ balance });
+
       this.$store.commit('set', {
         user: {
           ...data,
+          balance,
           loggedIn: true,
         },
       });

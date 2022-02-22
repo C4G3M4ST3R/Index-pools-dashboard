@@ -79,6 +79,7 @@ export default {
     { src: '~/plugins/vuex-persist', mode: 'client' },
     '~/plugins/moment',
     { src: '~/plugins/highcharts.js', mode: 'client' },
+    '~/plugins/anyswap',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

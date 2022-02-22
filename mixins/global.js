@@ -12,7 +12,7 @@ export default {
   data: () => ({
     logo,
     hero,
-    tokens,
+    tokens: tokens.filter(key => !!key.uniswap_link),
   }),
   components: {
     Loader,
@@ -49,7 +49,7 @@ export default {
         : '/img/connect/walletconnect-logo.svg';
     },
     userAddress() {
-      const { ethAddress: address } = this.user;
+      const { address } = this.user;
       const first5 = address?.slice(0, 5);
       const last4 = address?.slice(-5);
 

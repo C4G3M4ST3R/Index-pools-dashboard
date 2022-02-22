@@ -1,0 +1,46 @@
+[
+  {
+    "chainId": "1",
+    "chainName": "Ethereum",
+    "nativeCurrency": {
+      "name": "ETH",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpcUrls": ["https://ethmainnet.anyswap.exchange"],
+    "blockExplorerUrls": ["https://etherscan.io"]
+  },
+  {
+    "chainId": "56",
+    "chainName": "Binance Smart Chain",
+    "nativeCurrency": {
+      "name": "BSC",
+      "symbol": "BSC",
+      "decimals": 18
+    },
+    "rpcUrls": ["https://bsc-dataseed.binance.org/"],
+    "blockExplorerUrls": ["https://bscscan.com/"]
+  },
+  {
+    "chainId": "42161",
+    "chainName": "Arbitrum One",
+    "nativeCurrency": {
+      "name": "AETH",
+      "symbol": "AETH",
+      "decimals": 18
+    },
+    "rpcUrls": ["https://arb1.arbitrum.io/rpc"],
+    "blockExplorerUrls": ["https://arbiscan.io/#/"]
+  },
+  {
+    "chainId": "43114",
+    "chainName": "Avalanche",
+    "nativeCurrency": {
+      "name": "Avax",
+      "symbol": "Avax",
+      "decimals": 18
+    },
+    "rpcUrls": ["https://api.avax.network/ext/bc/C/rpc"],
+    "blockExplorerUrls": ["https://cchain.explorer.avax.network/"]
+  }
+]

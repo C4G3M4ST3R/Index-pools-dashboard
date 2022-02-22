@@ -72,7 +72,7 @@ export default {
         const address = accounts[0];
 
         this.setUser({
-          ethAddress: address,
+          address,
           wallet: peerMeta.name,
           network: this.networks[chainId],
           peerId,
@@ -96,7 +96,7 @@ export default {
       const address = accounts[0];
 
       this.setUser({
-        ethAddress: address,
+        address,
         wallet: peerMeta.name,
         network: this.networks[chainId],
         peerId,

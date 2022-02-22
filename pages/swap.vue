@@ -24,9 +24,7 @@
       <div class="col-12">
         <label for="from" class="d-flex justify-content-between">
           <span>From</span>
-          <span>
-            Balance: 0.00003
-          </span>
+          <span> Balance: {{ user.balance }} </span>
         </label>
         <div class="form-group d-flex justify-content-between">
           <div>
