@@ -148,37 +148,7 @@
           </nuxt-link>
         </li>
 
-        <li class="nav-item has-sub">
-          <a href="#">
-            <svg
-              viewBox="0 0 24 24"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2"
-            >
-              <path
-                d="M5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7V18C3 19.1046 3.89543 20 5 20H20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18H5V7Z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M19 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11H10V10C10 9.44772 10.4477 9 11 9H14V7C14 6.44772 14.4477 6 15 6H19C19.5523 6 20 6.44772 20 7V16C20 16.5523 19.5523 17 19 17ZM16 8H18V15H16V8ZM12 15H14V11H12V15ZM10 13H8V15H10V13Z"
-              ></path>
-            </svg>
-            <span class="ml-2 menu-title">Charts</span>
-          </a>
-          <ul class="menu-content">
-            <template v-for="{ symbol } in tokens">
-              <li @click.stop="" :key="symbol + 'b'">
-                <nuxt-link :to="`/chart/${symbol}`">
-                  <span class="menu-item">
-                    {{ symbol }}
-                  </span>
-                </nuxt-link>
-              </li>
-            </template>
-          </ul>
-        </li>
+  
 
         <li class="nav-item">
           <a href="#" target="_blank">
@@ -233,53 +203,6 @@
             </li>
           </ul>
         </li>
-
-        <!-- <li class="nav-item has-sub">
-          <a href="#">
-            <svg
-              viewBox="0 0 24 24"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2"
-            >
-              <path
-                d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"
-              ></path>
-            </svg>
-
-            <span class="ml-2 menu-title">More</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#!">
-                <span class="menu-item">
-                  List
-                </span>
-              </nuxt-link>
-            </li>
-          </ul>
-        </li> -->
       </ul>
 
       <div class="footer-bottom p-4">
