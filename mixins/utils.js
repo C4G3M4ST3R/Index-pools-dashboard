@@ -37,6 +37,10 @@ const Utils = {
       .querySelector('.main-menu.menu-fixed')
       .classList.toggle('menu-shadow');
   },
+
+  closeAllModals() {
+    $('.modal').modal('hide');
+  },
 };
 
 export default Utils;
