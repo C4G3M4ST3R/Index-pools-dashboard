@@ -124,7 +124,7 @@
             </li>
 
             <li>
-              <nuxt-link to="/pool">
+              <nuxt-link to="/#">
                 <span class="menu-item">
                   Liquidity
                 </span>
@@ -132,7 +132,7 @@
             </li>
 
             <li>
-              <nuxt-link to="/bridge">
+              <nuxt-link to="/#">
                 <span class="menu-item">
                   Cross Chain Bridge
                 </span>
