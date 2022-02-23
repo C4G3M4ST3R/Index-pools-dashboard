@@ -90,7 +90,7 @@
               <div class="mt-3">
                 <a
                   type="button"
-                  href="https://manual.cag3.io"
+                  href="https://www.tokensets.com/v2/set/0xBbA8120b355bC70E771F28e151a141A126843CdF"
                   target="_blank"
                   class="btn btn-outline-white border-white rounded-pill py-2 px-4"
                 >
