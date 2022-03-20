@@ -191,7 +191,7 @@
           </nuxt-link>
         </li>
 
-        <li class="nav-item has-sub d-none">
+        <li class="nav-item has-sub">
           <a href="#">
             <svg
               viewBox="0 0 24 24"

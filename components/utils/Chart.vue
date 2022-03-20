@@ -72,10 +72,6 @@ export default {
           },
           gridLineColor: 'transparent',
         },
-        tooltip: {
-          shared: true,
-          pointFormat: '<b>${point.y:,.0f}</b>',
-        },
         credits: {
           enabled: false,
         },
