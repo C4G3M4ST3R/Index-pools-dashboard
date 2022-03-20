@@ -303,6 +303,9 @@ export default {
 </script>
 
 <style scoped>
+@import url('~/assets/css/bt.css');
+@import url('~/assets/css/local.css');
+
 .box {
   background: rgba(236, 28, 28, 0.41);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

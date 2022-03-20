@@ -15,9 +15,11 @@ const months = [
 
 export default {
   formatDate(date) {
-    return `${months[new Date(date).getMonth()].toUpperCase()} ${new Date(
-      date,
-    ).getFullYear()}`;
+    let year = new Date(date).getFullYear();
+
+    if (year === 1970) year = new Date().getFullYear();
+
+    return `${months[new Date(date).getMonth()].toUpperCase()} ${year}`;
   },
   formatAMPM(date) {
     var hours = date.getHours();

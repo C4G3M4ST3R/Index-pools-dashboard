@@ -74,7 +74,12 @@
           </div>
 
           <div class="chart text-center">
-            <chart v-if="!!chartData" :chartData="chartData" :token="token" />
+            <template v-if="!loading">
+              <chart v-if="!!chartData" :chartData="chartData" :token="token" />
+            </template>
+            <div v-else class="py-5">
+              <loader class="py-5" />
+            </div>
           </div>
 
           <div class="py-5">
@@ -163,10 +168,11 @@
 
 <script>
 import Chart from '~/components/utils/Chart.vue';
+import Loader from '../../components/utils/Loader.vue';
 import tokens from '../../mixins/tokens';
 
 export default {
-  components: { Chart },
+  components: { Chart, Loader },
   layout: 'dashboard',
   async asyncData({ $http, params }) {
     const { token } = params;
@@ -196,26 +202,30 @@ export default {
       return () =>
         import(`~/components/tabs/${this.capitalize(tab2 || tab1)}.vue`);
     },
-    CMCId() {
+    tokenData() {
       const token = tokens.find(key => key.symbol === this.token);
       if (!token) return '';
-      return token.cmc_id;
+      return token;
     },
   },
   methods: {
     capitalize: value => value.charAt(0).toUpperCase() + value.slice(1),
     formatTitle: str => str.split('-').join(' '),
-    async getCryptoData(range = '1D') {
+    async getCryptoData(range = '1WK') {
       if (this.currentRange === range) return;
 
       this.loading = true;
       this.currentRange = range;
-      console.log({ range });
-      // if (range === '1WK') range = '7D';
 
+      if (range === '1D') range = '24h';
+      else if (range === '1WK') range = '1w';
+
+      let { coinId } = this.tokenData;
+
+      console.log({ coinId });
       try {
         const data = await this.$http.$get(
-          `/api/get-crypto-data?id=${this.token}&interval=${range}`,
+          `/api/get-crypto-data?id=${coinId}&interval=${range.toLowerCase()}`,
         );
         console.log({ data });
         this.chartData = data;
