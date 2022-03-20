@@ -2,7 +2,7 @@
   <div class="container">
     <div class="d-sm-flex justify-content-between">
       <div>
-        <h3 class="mt-2">Farms</h3>
+        <h3 class="mt-2">Swap</h3>
       </div>
 
       <div>

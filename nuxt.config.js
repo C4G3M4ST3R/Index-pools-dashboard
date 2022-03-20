@@ -27,8 +27,7 @@ export default {
         href: '/favicon/apple-touch-icon.png',
       },
       {
-        rel: 'icon',
-        type: 'image/png',
+        rel: 'icon',        type: 'image/png',
         sizes: '32x32',
         href: '/favicon/favicon-32x32.png',
       },
