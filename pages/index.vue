@@ -41,7 +41,7 @@
     <div>
       <h4>Ecosystem</h4>
       <p class="text-grey">
-        Browse through various memeverse
+        Browse through Our memeverse ...
       </p>
 
       <div class="row mt-3">
@@ -101,7 +101,7 @@
           </a>
         </div>
 
-        <template v-for="{ symbol, img, name } in tokens">
+        <!-- <template v-for="{ symbol, img, name } in tokens">
           <div class="col-12 col-md-4" :key="symbol">
             <nuxt-link :to="`/${symbol}`">
               <div class="card other p-0">
@@ -129,7 +129,7 @@
               </div>
             </nuxt-link>
           </div>
-        </template>
+        </template> -->
       </div>
     </div>
   </div>
